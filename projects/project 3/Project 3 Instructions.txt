@@ -1,0 +1,72 @@
+For this project, you will implement two functions and some test code. The functions are described below.
+
+Write a function, is_valid_CC, that validates credit card numbers. The function takes 1 argument, a string representation of a credit card number, and returns True if the number is valid and False otherwise. A valid credit card is a number containing only digits 0-9. The length is between 13 – 16 digits and the number starts with a 4 (Visa), 5 (MasterCard), 6 (Discover), or 37 (American Express). You also have to verify the number using the Luhn algorithm.
+       Here is a description of the Luhn algorithm using the number 4388576018402626.
+
+Starting with the rightmost digit, add every other digit.
+            6 + 6 + 0 + 8 + 0 + 7 + 8 + 3 = 38
+
+Double every other digit starting with the second digit from the right. If doubling of a digit results in a two-digit number, add the two digits to get a single-digit number.
+            2 * 2 = 4
+
+            2 * 2 = 4
+
+            4 * 2 = 8
+
+            1 * 2 = 2
+
+            6 * 2 = 12 (1 + 2 = 3)
+
+            5 * 2 = 10 (1 + 0 = 1)
+
+            8 * 2 = 16 (1 + 6 = 7)
+
+            4 * 2 = 8
+
+            Add all the single digit numbers.
+
+            4 + 4 + 8 + 2 + 3 + 1 + 7 + 8 = 37
+
+Sum the results from Steps 1 and 2.
+            38 + 37 = 75
+
+If the result from step 3 is divisible by 10, the credit card number is valid. Otherwise the number is invalid.
+Write a function, is_valid_RN, which validates ABA (American Banker's Association) routing numbers. The function takes 1 argument, a string representation of a routing number, and returns True if the number is valid and False otherwise. A valid routing number is a number containing only digits 0-9 that is exactly 9 digits long. You also have to verify the number using the following algorithm.
+       Here is a description of the algorithm using the number 789456124.
+
+Starting with the rightmost digit, add every third digit.
+           4 + 6 + 9 = 19
+
+Starting with the second digit from the right, add every third digit and multiply the result by 7.
+           7 (2 + 5 + 8) = 105
+
+Starting with the third digit from the right, add every third digit and multiply the result by 3.
+           3 (1 + 4 + 7) = 36
+
+Sum the results from Steps 1 – 3.
+           19 + 105 + 36 = 160
+
+If the result from step 4 is divisible by 10, the routing number is valid. Otherwise the number is invalid.
+Your test code should include a loop that prompts for a credit card number or q to quit. If the user enters a credit card number, print a statement whether it is valid and prompt for another credit card number. If the user types q, the loop should be terminated. Do the same for routing numbers - Include loop that prompts for a routing number or q to quit. If the user enters a routing number, print a statement whether it is valid and prompt for another routing number. If the user types q, the loop should be terminated.
+
+Do NOT use global variables in either function.
+
+The data will be input in exactly the same form as shown below. You need to match this form to receive full points. Prompt for credit card numbers until q is typed. Then prompt for routing numbers until q is typed. Do NOT ask things like "Do you want to continue?" or include "Press Enter to continue" anywhere in your program.
+
+Sample Run:
+
+Credit Card Entry
+--------------------------------------------------------------------------------
+Enter credit card number: 4388576018410707
+4388576018410707 is valid
+Enter credit card number: 4388576018402626
+4388576018402626 is invalid
+Enter credit card number: q
+
+Routing Number Entry
+--------------------------------------------------------------------------------
+Enter routing number: 789456124
+789456124 is valid
+Enter routing number: 789456125
+789456125 is invalid
+Enter routing number: q

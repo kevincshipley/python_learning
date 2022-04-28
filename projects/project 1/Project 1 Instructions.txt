@@ -1,0 +1,8 @@
+You are the head programmer at Python Inc. You are tasked with writing a program to take input for an employee. Prompt the user for a name, hours worked, and hourly rate. If the employee works over 40 hours, they should receive 1.5 times their hourly rate for all hours worked over 40. Print the employee name and the amount the employee should be paid. Display the payment amount with two digits after the decimal place and commas. Include a module docstring that summarizes the program. Only submit the .py file.
+
+Sample Run:
+
+Enter a name: Guido van Rossum
+Enter hours worked: 42.5
+Enter hourly rate: 285.11
+Guido van Rossum should be paid $12,473.56

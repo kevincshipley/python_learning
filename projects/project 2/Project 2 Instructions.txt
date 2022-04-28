@@ -1,0 +1,31 @@
+You will modify Project 1 by adding loops and functions.
+
+The two functions you will write are described below.
+
+Write a function called get_input() that takes no arguments and returns the name (str), hours worked (float), and hourly rate (float) for one employee. The body of the function will include the prompts and store the user input that will be returned.
+Write a function called calc_pay(hours, rate) that takes two arguments and returns the amount the employee gets paid for the week. The body will include the calculation. It should calculate the payment amount using the rules outlined in Project 1. Do not print inside the function.
+You will need to add a prompt that asks how many employees will be entered. Use a looping structure to repeat the prompt (get_input) and calculation (calc_pay) for each employee. Remember to print the information for each employee entered. Calculate the cumulative total and average pay for the employees entered. Print both results.
+
+You need to include function annotations, function docstrings, and a module docstring. The program should be included in an if __name__ == "__main__": suite to guarantee the program does not run when imported in another module. Functions should be defined outside of this suite. Do NOT use global variables in either function.
+
+Sample Run:
+
+How many employees do you want to enter? 3
+
+Enter a name: Guido van Rossum
+Enter hours worked: 42.5
+Enter hourly rate: 285.11
+Guido van Rossum should be paid $12,473.56
+
+Enter a name: Blaise Pascal
+Enter hours worked: 45
+Enter hourly rate: 294
+Blaise Pascal should be paid $13,965.00
+
+Enter a name: Charles Babbage
+Enter hours worked: 51
+Enter hourly rate: 268
+Charles Babbage should be paid $15,142.00
+
+The total amount to be paid is $41,580.56
+The average employee is paid $13,860.19
