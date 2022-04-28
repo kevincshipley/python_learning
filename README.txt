@@ -1,0 +1,1 @@
+This repository contains my school work dealing with the Python language as I am learning computing. There are directories for my homework, lab, and projects which include the initial instruction and what was submitted. There may be multiple versions, depending on if the submission was then updated after instructor feedback.
