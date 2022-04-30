@@ -1,0 +1,68 @@
+You will modify Project 2 to include an employee class definition. You can begin with the class you wrote for Lab 13. i.e. You need to include a constructor. You need to write getters and setters for the name, hours, and rate instance variables (6 methods total). The setters for hours and rate should validate the data (make sure it is greater than 0). Make sure to use the setters. I should not be able to use a method to set a negative value for hours or rate. The get_input and calc_pay functions should become methods of the class. They will need a few modifications. The get_input function should set the appropriate instance variables (after prompting the user) instead of returning them. The calc_pay will no longer need arguments because hours and hourly rate are now instance variables.
+
+You will also provide a menu interface for the user. This code should be outside the class definition and construct objects and call methods from the class definition as required. The menu will initially allow the user to enter an employee or quit the application. Once the user has entered an employee, the option to print all employees should be added to the menu. When the user quits the application, print the total and average pay for all employees entered during that session. If no employees were entered, print something stating no employees were entered.
+
+Sample Run (user input in bold):
+
+********************************************************************************
+                        Employee Data Entry Application                         
+********************************************************************************
+1: Enter an employee
+q: Quit the application
+>>> 1
+
+Enter a name: Test Employee0
+Enter hours worked: 40
+Enter hourly rate: 10
+
+1: Enter an employee
+2: Print employee list
+q: Quit the application
+>>> 2
+
+Name:                     Test Employee0
+Hours Worked:             40.00
+Hourly Rate:              $10.00
+
+1: Enter an employee
+2: Print employee list
+q: Quit the application
+>>> 1
+
+Enter a name: Test Employee1
+Enter hours worked: 39
+Enter hourly rate: 10
+
+1: Enter an employee
+2: Print employee list
+q: Quit the application
+>>> 1
+
+Enter a name: Test Employee2
+Enter hours worked: 42.5
+Enter hourly rate: 285.11
+
+1: Enter an employee
+2: Print employee list
+q: Quit the application
+>>> 2
+
+Name:                     Test Employee0
+Hours Worked:             40.00
+Hourly Rate:              $10.00
+
+Name:                     Test Employee1
+Hours Worked:             39.00
+Hourly Rate:              $10.00
+
+Name:                     Test Employee2
+Hours Worked:             42.50
+Hourly Rate:              $285.11
+
+1: Enter an employee
+2: Print employee list
+q: Quit the application
+>>> q
+
+The total amount to be paid is $13263.56.
+The average employee is paid $4421.19.
