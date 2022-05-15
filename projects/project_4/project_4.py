@@ -13,13 +13,18 @@ if __name__ == "__main__":
 
     # Employee class defintion
     class Employee:
+        # Employee ID number
+        __eid = 1
         # You need to include a constructor.
-        def __init__(self, name, hours, rate):
-            self.name = "employee"
-            self.hours = 1
-            self.rate = 1
+        def __init__(self, name="", hours=0, rate=0):
+            self.__eid = Employee.__eid
+            Employee.__eid += 1
+            self.name = name
+            self.hours = hours
+            self.rate = rate
             self.set_hours(hours)
             self.set_rate(rate)
+            
         # You need to write getters and setters for the name, hours, and rate
         # instance variables (6 methods total). The setters for hours and rate
         # should validate the data (make sure it is greater than 0).
@@ -37,6 +42,9 @@ if __name__ == "__main__":
             return self.hours
         def get_rate(self):
             return self.rate
+        ## ADDED for EID
+        def get_eid(self):
+            return self.__eid
 
         # The get_input and calc_pay functions should become methods of the class.
         # They will need a few modifications.
@@ -69,11 +77,12 @@ if __name__ == "__main__":
                 pay = (1.5 * self.rate) * self.hours            
             return pay
 
+    '''Initial Employee entry'''
     # The menu will initially allow the user to enter an employee or quit the
     # application.
     print("1: Enter an employee\nq: Quit the application")
     employee = Employee("employee", 1, 1)
-    employee_info = {"Name": employee.get_name(), "Hours": 0,
+    employee_info = {"EID": 0, "Name": employee.get_name(), "Hours": 0,
                      "Rate": 0, "Pay": 0}
 ##    control = input()
 ##    print()
@@ -86,6 +95,7 @@ if __name__ == "__main__":
 ##        print("invalid input.\n")
     
     employee.get_input()
+    employee_info["EID"] = employee.get_eid()
     employee_info["Name"] = employee.get_name()
     employee_info["Hours"] += employee.get_hours()
     employee_info["Rate"] += employee.get_rate()
