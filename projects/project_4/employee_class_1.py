@@ -60,6 +60,13 @@ class Employee:
             pay = (1.5 * self.rate) * self.hours            
         return pay
 
+employee = Employee()
+employee = employee.get_input()
+
+for i in employee:
+    print(employee(i))
+    i += 1
+
 ##emp_name = input("Employee: ")
 ##emp_hours = int(input("Hours: "))
 ##emp_rate = int(input("Rate: "))
@@ -70,31 +77,31 @@ class Employee:
 ##print(employee.get_hours())
 ##print(employee.get_rate())
 
-employee = Employee("Monty", 50, 10) # pay is 750
-
-#employee.get_input()
-
-print(employee.get_eid())
-print(employee.get_name())
-print(employee.get_hours())
-print(employee.get_rate())
-print(employee.calc_pay())
-print()
-
-employee2 = Employee("Slick", 200, 20)
-
-print(employee2.get_eid())
-print(employee2.get_name())
-print(employee2.get_hours())
-print(employee2.get_rate())
-print(employee2.calc_pay())
-print()
-
-employee3 = Employee("Spin", 10, 10)
-
-print(employee3.get_eid())
-print(employee3.get_name())
-print(employee3.get_hours())
-print(employee3.get_rate())
-print(employee3.calc_pay())
-print()
+##employee = Employee("Monty", 50, 10) # pay is 750
+##
+###employee.get_input()
+##
+##print(employee.get_eid())
+##print(employee.get_name())
+##print(employee.get_hours())
+##print(employee.get_rate())
+##print(employee.calc_pay())
+##print()
+##
+##employee2 = Employee("Slick", 200, 20)
+##
+##print(employee2.get_eid())
+##print(employee2.get_name())
+##print(employee2.get_hours())
+##print(employee2.get_rate())
+##print(employee2.calc_pay())
+##print()
+##
+##employee3 = Employee("Spin", 10, 10)
+##
+##print(employee3.get_eid())
+##print(employee3.get_name())
+##print(employee3.get_hours())
+##print(employee3.get_rate())
+##print(employee3.calc_pay())
+##print()
